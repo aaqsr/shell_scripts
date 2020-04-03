@@ -1,0 +1,3 @@
+#! /bin/sh 
+
+cat ~/Programming/shell_scripts/emoji | dmenu -p 'Pick emoji to be copied:' -l 10 | awk {'print $1'} | xclip -sel clip
