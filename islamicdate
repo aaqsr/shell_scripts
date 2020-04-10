@@ -2,4 +2,4 @@
 # Make sure to install the itools package (arabeyes)
 
 # ical | grep '\[' | cut -d"[" -f2 | tr ']' '
-echo "$(ical | awk -F'[][]' '{print $2}' | grep '\S')th $(ical | awk '{print $1}')" | grep th
+echo "🌙 $(ical | awk -F'[][]' '{print $2}' | grep '\S')th $(ical | awk '{print $1}')" | grep th
