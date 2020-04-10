@@ -1,0 +1,5 @@
+#!/bin/sh
+# Just prints out the date and time the way I like it.
+
+date +"🕐"%H:%M\ "🗓"%a","\ %m"th"\ %h\ "'"%y
+# 🕐18:31 🗓Fri, 03th Apr '20
