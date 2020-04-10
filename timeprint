@@ -1,0 +1,5 @@
+#!/bin/sh
+# Part of the dwmbar scripts:
+
+# Prints out the time
+date +"🕐"\ %H:%M

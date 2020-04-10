@@ -1,0 +1,14 @@
+#!/bin/sh
+# Prints out the volume and accompanying emoji
+volume="$(pamixer --get-volume)"
+# echo $getvolume
+
+if [ $volume -eq 0 ] ; then
+    echo "🔇 $volume%" 
+elif [ $volume -eq 100 ] ; then
+    echo "📢 $volume%"
+elif (( $volume < 40 )) ; then
+    echo "🔉 $volume%"
+else
+    echo "🔊 $volume%"
+fi

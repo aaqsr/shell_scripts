@@ -1,0 +1,7 @@
+#!/bin/sh
+# Updates the dwm bar every 30 seconds
+
+while true; do
+    dwmbar
+    sleep 30
+done

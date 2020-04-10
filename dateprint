@@ -1,0 +1,5 @@
+#!/bin/sh
+# Part of dwmbar scripts 
+
+# Prints out the date
+date +"🗓"\ %a","\ %d"th"\ %h\ "'"%y

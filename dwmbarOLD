@@ -1,0 +1,25 @@
+#!/bin/sh
+# Deprecated and moved to different files
+# Sets the dwm bar
+
+# To seperate the modules
+sep='|'
+
+# while true; do
+# Prints out the time
+time="$( date +"🕐"\ %H:%M )" 
+
+# Prints out the date
+date="$(date +"🗓"\ %a","\ %d"th"\ %h\ "'"%y)"
+
+# Prints out the islamic date
+isldate="🌙 $(echo "$(ical | awk -F'[][]' '{print $2}' | grep '\S')th $(ical | awk '{print $1}')" | grep th)"
+
+# Print out the volume
+volume="🔊 $(pamixer --get-volume)%"
+
+# Sets the bar in one line
+# echo "$volume $sep $timedate"
+xsetroot -name " $volume $sep $time $sep $date $sep $isldate"
+# sleep 30
+# done
