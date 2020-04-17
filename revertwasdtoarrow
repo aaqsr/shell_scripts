@@ -1,0 +1,6 @@
+#!/bin/sh
+# Changes the wasd keys back to standard wasd keys if they've been mapped
+xmodmap -e "keycode 25=w"
+xmodmap -e "keycode 38=a"
+xmodmap -e "keycode 39=s"
+xmodmap -e "keycode 40=d"

@@ -1,0 +1,6 @@
+#!/bin/sh
+# Sets the wasd keys from inputting letters to inputting arrow keys for some games
+xmodmap -e "keycode 25=Up"
+xmodmap -e "keycode 38=Left"
+xmodmap -e "keycode 39=Down"
+xmodmap -e "keycode 40=Right"
