@@ -1,0 +1,5 @@
+#!/bin/sh
+# Allows you to select a region to take a screenshot of using imgmagik and xclip.
+# It then copies the image to your clipboard
+
+import png:- | xclip -selection clipboard -target image/png

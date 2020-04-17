@@ -1,0 +1,17 @@
+#!/bin/sh
+# Allows you to select a region to take a screenshot of using imgmagik and xclip.
+# It then saves the image to ~/Pictures and copies the image to your clipboard
+# couldnt get xargs to work :
+# date +%y'_'%m'_'%d | dmenu -p "Name of Screenshot?" | tr ' ' '_' | xargs -0I{} "import ~/Pictures/{}.png && xclip -selection clipboard -target image/png {}"
+# xargs -0I{} import ~/Pictures/{}.png && xclip -selection clipboard -target image/png {}
+
+# OLD METHOD (Write the file name first then take screenshot)
+# name="$(date +%y'_'%m'_'%d | dmenu -p "Name of Screenshot?" | tr ' ' '_')"
+# import ~/Pictures/$name.png 
+# xclip -selection clipboard -target image/png ~/Pictures/$name.png
+
+# NEW METHOD (Take a screenshot named __sc__temp and copy it and then rename)
+import ~/Pictures/__sc__temp.png                                                       # Takes a screenshot via imgmagik and saves it with a temp name
+xclip -selection clipboard -target image/png ~/Pictures/__sc__temp.png                 # Copies the temp image to clipboard (this is done so that image can be pasted without naming)
+name="$(date +%y'_'%m'_'%d | dmenu -p "Name of Screenshot?" | tr ' ' '_')"             # Uses dmenu to take the name of the image giving the date as default and normalises it 
+mv ~/Pictures/__sc__temp.png ~/Pictures/$name.png                                      # Renames the temp pic with the new name

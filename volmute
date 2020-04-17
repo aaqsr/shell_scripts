@@ -1,0 +1,3 @@
+#!/bin/sh
+# Toggles pamixer's mute
+pamixer -t
