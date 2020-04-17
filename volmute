@@ -1,3 +1,4 @@
 #!/bin/sh
-# Toggles pamixer's mute
-pamixer -t
+# Toggles pamixer's mute then updates the dwmbar
+
+pamixer -t && dwmbar &
