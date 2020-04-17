@@ -1,4 +1,4 @@
 #!/bin/sh
 # Increases the volume then updates the dwmbar
 
-pamixer -i 5 && dwmbar & 
+pamixer -i 5 && dwmbar &
